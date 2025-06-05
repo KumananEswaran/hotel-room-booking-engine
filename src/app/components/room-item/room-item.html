@@ -1,0 +1,22 @@
+<div class="card mb-3">
+  <div class="card-body">
+    <h5 class="card-title">Room {{ room.name }} ({{ room.type }})</h5>
+    <p class="card-text">Price: ${{ room.price }}</p>
+    <p class="card-text">
+      Status:
+      <span
+        [class.text-success]="room.available"
+        [class.text-danger]="!room.available"
+      >
+        {{ room.available ? 'Available' : 'Booked' }}
+      </span>
+    </p>
+    <button
+      class="btn btn-primary"
+      [disabled]="!room.available"
+      (click)="onBookClick()"
+    >
+      Book
+    </button>
+  </div>
+</div>

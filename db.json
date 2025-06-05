@@ -1,0 +1,24 @@
+{
+  "rooms": [
+    { "name": "101", "type": "Single", "price": 100, "available": true },
+    { "name": "102", "type": "Double", "price": 150, "available": false },
+    { "name": "201", "type": "Suite", "price": 300, "available": true },
+    { "name": "103", "type": "Single", "price": 100, "available": false },
+    { "name": "104", "type": "Double", "price": 150, "available": true },
+    { "name": "202", "type": "Suite", "price": 320, "available": true },
+    { "name": "105", "type": "Single", "price": 90, "available": true },
+    { "name": "106", "type": "Double", "price": 140, "available": true },
+    { "name": "203", "type": "Suite", "price": 310, "available": true },
+    { "name": "107", "type": "Single", "price": 110, "available": true },
+    { "name": "108", "type": "Double", "price": 160, "available": true },
+    { "name": "204", "type": "Suite", "price": 330, "available": true },
+    { "name": "109", "type": "Single", "price": 95, "available": true },
+    { "name": "110", "type": "Double", "price": 155, "available": true },
+    { "name": "205", "type": "Suite", "price": 340, "available": true },
+    { "name": "111", "type": "Single", "price": 105, "available": true },
+    { "name": "112", "type": "Double", "price": 165, "available": true },
+    { "name": "206", "type": "Suite", "price": 350, "available": true },
+    { "name": "113", "type": "Single", "price": 100, "available": true },
+    { "name": "207", "type": "Suite", "price": 360, "available": true }
+  ]
+}
