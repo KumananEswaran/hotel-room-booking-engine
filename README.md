@@ -2,58 +2,35 @@
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.0.0.
 
-## Development server
+## How to Run the Application 
 
-To start a local development server, run:
+### Install dependencies
 
-```bash
+```
+npm install
+```
+
+### Start the Angular development server (runs on http://localhost:4200)
+
+```
 ng serve
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+### In a separate terminal, start the JSON server (runs on http://localhost:5000):
 
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
 ```
-
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
+npm run server
 ```
+This project uses a local mock server (json-server) to simulate API calls instead of mocking with of(...) in the service.
 
-## Building
+## Design Decisions
 
-To build the project run:
+Modular Components: Used Angular standalone components (RoomItem, RoomCards, BookRoomModal) to keep the architecture clean and reusable.
 
-```bash
-ng build
-```
+Mock API: Utilized json-server with mock data to simulate backend responses, satisfying the requirement for a local mock service.
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+State Persistence: Room booking status is saved in localStorage so users see updates even after refreshing the page.
 
-## Running unit tests
+Reactive Modal UX: Room booking modal is controlled by component state (showModal) for a responsive UI.
 
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+User Notifications: Integrated Angular Material’s MatSnackBar to provide feedback after successful bookings.
